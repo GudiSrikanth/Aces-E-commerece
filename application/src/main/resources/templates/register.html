@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<link rel="stylesheet" href="css/register.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register Page</title>
+
+<nav class="navbar">
+	<div class="nav">
+		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
+		<div class="nav-items">
+			<div class="search">
+				<input type="text" class="search-box"
+					placeholder="search brand, product">
+				<button class="search-btn">search</button>
+			</div>
+			<div class="buttons">
+				<a th:href="@{/categories}">CATEGORIES</a>
+				<a th:href="@{/signin}">LOGIN</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<head>
+<title>Register Screen</title>
+</head>
+
+<body>
+	<div class="createaccount-page">
+		<div class="form">
+			<div class="createaccount">
+				<div class="create-header">
+					<h3>REGISTER A NEW ACCOUNT</h3>
+				</div>
+			</div>
+			<form th:action="@{/registered}" th:object="${user}" 
+			method="post" class="createaccount-form">
+				<input type="text" th:field="*{firstName}" placeholder="first name" required minlength="3" maxlength="20"/></br> 
+				<input type="text" th:field="*{lastName}" placeholder="last name" minlength="1" maxlength="20"/></br>
+				<input type="text" th:field="*{userName}" placeholder="username" required minlength="2" maxlength="20"/></br>
+				<input type="password" th:field="*{password}"	placeholder="password" required minlength="6" maxlength="20"/></br>
+				<input type="tel" th:field="*{mobileNumber}" placeholder="mobile number" required minlength="10" maxlength="10"/>
+				<input type="text" th:field="*{email}" placeholder="email id" required  minlength="10" maxlength="35"/>
+				<button type="submit">Create an account</button>			
+			</form>
+		</div>
+	</div>
+</body>
+
+
+<section id="footer">
+	<div class="foot">
+	
+       <a th:href="@{/homepage}">HOME</a>
+        </br>
+		<a href="">ABOUT US</a> </br> 
+		<a href="">CONTACT US</a>
+	</div>
+</section>
+</html>

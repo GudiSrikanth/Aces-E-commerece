@@ -1,0 +1,137 @@
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="css/products.css">
+<nav class="navbar">
+	<div class="nav">
+		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
+		<div class="nav-items">
+			<div class="search">
+				<input type="text" class="search-box"
+					placeholder="search brand, product">
+				<button class="search-btn">search</button>
+			</div>
+			<div class="buttons">
+				<a th:href="@{/categories}">CATEGORIES</a> <a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/signin}">LOGIN</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<section>
+	<div class="section">
+		<div class="row">
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e1.jpg}">
+				</div>
+				<div class="name">Oven</div>
+				<div class="price">Rs. 5000</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div></br>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e2.jpg}">
+				</div>
+				<div class="name">Refridgerator</div>
+				<div class="price">Rs. 16300</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e3.jpg}">
+				</div>
+				<div class="name">Mixer</div>
+				<div class="price">Rs. 3900</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e4.jpg}">
+				</div>
+				<div class="name">Iron box</div>
+				<div class="price">Rs. 1400</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e5.jpg}">
+				</div>
+				<div class="name">Geyser</div>
+				<div class="price">RS. 12000</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e6.png}">
+				</div>
+				<div class="name">Induction Stove</div>
+				<div class="price">Rs. 1800</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e7.jpg}">
+				</div>
+				<div class="name">Toaster</div>
+				<div class="price">Rs 1280</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e8.jpg}">
+				</div>
+				<div class="name">Mobile</div>
+				<div class="price">Rs. 18000</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e9.png}">
+				</div>
+				<div class="name">Bluetooth Earphones</div>
+				<div class="price">Rs. 1990</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400"
+						th:src="@{images/e10.jpg}">
+				</div>
+				<div class="name">Ear pods</div>
+				<div class="price">Rs. 2900</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="footer">
+	<div class="foot">
+        <a th:href="@{/homepage}">HOME</a>
+        </br>
+		<a href="">ABOUT US</a> 
+		</br> 
+		<a href="">CONTACT US</a>
+	</div>
+</section>
+</html>
