@@ -63,7 +63,7 @@ header a img {
 }
 
 body {
-	background-color: #add8e6;
+	background-color: #d8bfd8;
 	font-family: "Roboto", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -156,4 +156,24 @@ body {
 
 .nav-items a img {
 	width: 30px;
+}
+
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 18px;
+    padding: 25px 0 60px;
+}
+.container1{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

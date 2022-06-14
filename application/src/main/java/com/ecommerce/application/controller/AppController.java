@@ -1,8 +1,13 @@
 package com.ecommerce.application.controller;
 import com.ecommerce.application.repository.UserRepository;
+import com.ecommerce.application.service.ProductService;
+
 import java.util.List;
 import com.ecommerce.application.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,17 +20,15 @@ public class AppController {
 
 	@Autowired
 	private UserRepository userRepo;
+	
+
 
 	@GetMapping("")
 	public String viewHomePage() {
 		return "homepage";
 	}
 	
-	@GetMapping("/homepage")
-	public String viewHomePage1() {
-		return "homepage";
-	}
-
+	
 	@GetMapping("/register")
 	public String showRegistrationForm(Model model) {
 		model.addAttribute("user", new User());
@@ -44,6 +47,12 @@ public class AppController {
 		return "categories";
 	}
 
+	@GetMapping("/coupon")
+	public String listCoupons() {
+
+		return "coupon";
+	}
+	
 	@GetMapping("/electronics")
 	public String listElectronics() {
 
@@ -75,8 +84,11 @@ public class AppController {
 	
 	@GetMapping("/signin")
 	public String showLoginPage() {
-		
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if(authentication==null || authentication instanceof AnonymousAuthenticationToken ) {
 		return "signin";
+		}
+		return "categories";
 	}
 	
 	@GetMapping("/resetpswd")
@@ -85,11 +97,26 @@ public class AppController {
 		return "resetpswd";
 	}
 	
-	@GetMapping("/users")
+	@GetMapping("/user")
 	public String listUsers(Model model) {
-	    List<User> listUsers = userRepo.findAll();
-	    model.addAttribute("listUsers", listUsers);
+	   List<User> listUsers = userRepo.findAll();
+	   model.addAttribute("listUsers", listUsers);
 	     
-	    return "users";
+	    return "user";
 	}
+	
+
+	@GetMapping("/about")
+	public String listabout() {
+		
+		return "about";
+}
+
+
+	@GetMapping("/contactus")
+	public String listcontactus() {
+		
+		return "contactus";
+}
+
 }

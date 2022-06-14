@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact us</title>
+<link rel="stylesheet" type="text/css" href="css/contact.css">
+</head>
+<body>
+
+	<div class="section">
+		<div class="container">
+			<div class="content-section">
+				<div class="title">
+					<h1>Contact Us</h1>
+				</div>
+				<div class="container">
+					<form>
+
+						<label for="fname">First Name</label> <input type="text"
+							id="fname" name="firstname" placeholder="Your name.."> <label
+							for="lname">Last Name</label> <input type="text" id="lname"
+							name="lastname" placeholder="Your last name.."> <label
+							for="subject">How can we help you?</label>
+						<textarea id="subject" name="subject"
+							placeholder="Write something.." style="height: 200px"></textarea>
+
+						<input type="submit" value="Submit">
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+		</div>
+		<div class="footer">
+		<div class="container1">
+			<div class="row">
+				<div class="footer-col-3">
+					<nav>
+						<ul>
+							<li><a  th:href="@{/about}" > About us</a></li>
+							<li><a  th:href="@{/}">Terms and condition</a></li>
+							<li><a  th:href="@{/}">Returns and exchange</a></li>
+							<li><a  th:href="@{/}">Private Policy</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
