@@ -18,11 +18,9 @@
 				<button class="search-btn">search</button>
 			</div>
 			<div class="buttons">
-			    <a>CART</a>
-				<a th:href="@{/categories}">CATEGORIES</a> 
-				<a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/categories}">CATEGORIES</a> <a th:href="@{/register}">REGISTER</a>
 				<a th:href="@{/signin}">LOGIN</a>
-				
+
 			</div>
 		</div>
 	</div>
@@ -30,12 +28,12 @@
 
 <body>
 
-	
+
 	<div class="header">
 		<div class="row">
 			<div class="col-2">
 				<h1>New Arrivals</h1>
-				
+
 				<a th:href="@{/categories}" class="btn">Shop Now &#8594;</a>
 				<h1>Exciting offers</h1>
 				<p>Get up to 50% off on premium products</p>
@@ -49,26 +47,55 @@
 
 	<div>
 		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div style="background: radial-gradient(#fff, #c8d693);">
+					<div class="row">
+						<div class="col-2">
+							<h1>Latest Collection for Kids</h1>
+							<a th:href="@{/kidsapparel}" class="btn"
+								style="background-color: black;">Shop Now</a>
+						</div>
+						<div class="col-2">
+							<a th:href="@{/kidsapparel}"><img
+								th:src="@{images/children.jpg}"></a>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<div class="mySlides fade">
 
-				<a th:href="@{/kidsapparel}"> <img
-					th:src="@{images/children.jpg}" style="width: 100%"></a>
+				<div style="background: radial-gradient(#fff, #d69f93);">
+					<div class="row">
+						<div class="col-2">
+							<h1>Latest Collection for Men</h1>
+							<a th:href="@{/menapparel}" class="btn"
+								style="background-color: black;">Shop Now</a>
+						</div>
+						<div class="col-2">
+							<a th:href="@{/menapparel}"><img
+								th:src="@{images/mensapparel.jpg}"></a>
+						</div>
+					</div>
+				</div>
 
 			</div>
 
 			<div class="mySlides fade">
 
-				<a th:href="@{/electronics}"> <img
-					th:src="@{images/electronics.jpg}" style="width: 100%">
-				</a>
-
-			</div>
-
-			<div class="mySlides fade">
-
-				<a th:href="@{/furniture}"><img th:src="@{images/furniture.jpg}"
-					style="width: 100%"></a>
+				<div style="background: radial-gradient(#fff, #ece07d);">
+					<div class="row">
+						<div class="col-2">
+							<h1>Latest Collection for Women</h1>
+							<a th:href="@{/womenapparel}" class="btn"
+								style="background-color: black;">Shop Now</a>
+						</div>
+						<div class="col-2">
+							<a th:href="@{/womenapparel}"><img
+								th:src="@{images/womensclothing.jpg}"></a>
+						</div>
+					</div>
+				</div>
 
 			</div>
 
@@ -113,11 +140,11 @@
 				<div class="footer-col-3">
 					<nav>
 						<ul>
-							<li><a  th:href="@{/about}" > About us</a></li>
-							<li><a th:href="@{/contactus}" > Contact Us</a></li>
-							<li><a  th:href="@{/}">Terms and condition</a></li>
-							<li><a  th:href="@{/}">Returns and exchange</a></li>
-							<li><a  th:href="@{/}">Private Policy</a></li>
+							<li><a th:href="@{/about}"> About us</a></li>
+							<li><a th:href="@{/contactus}"> Contact Us</a></li>
+							<li><a th:href="@{/}">Terms and condition</a></li>
+							<li><a th:href="@{/}">Returns and exchange</a></li>
+							<li><a th:href="@{/}">Private Policy</a></li>
 						</ul>
 					</nav>
 				</div>
