@@ -48,8 +48,6 @@
 	justify-content: space-between;
 }
 
-
-
 .logo {
 	height: 60px;
 }
@@ -116,32 +114,22 @@
 .nav-items a img {
 	width: 30px;
 }
+.footer{
+    background:#D3D3D3;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 0px 0 60px;
+}
+.container1{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .row{
-	margin:60px 0;
-}
-.card{
-	flex-basis:30%;
-	min-width:200px;
-	margin-bottom:30px;
-}
-.card{
-	width:100%
-}
-.card{
-	width:20%;
-}
-
-	
-
-#footer {
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-	position: static;
-	min-height: 0vh;
-	padding: 50px 100px;
-	background-color: white;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	top: 170%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
