@@ -1,0 +1,128 @@
+
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="css/fitness.css">
+<nav class="navbar">
+	<div class="nav">
+		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
+		<div class="nav-items">
+			<div class="search">
+				<input type="text" class="search-box"
+					placeholder="search brand, product">
+				<button class="search-btn">search</button>
+			</div>
+			<div class="buttons">
+				<a th:href="@{/categories}">CATEGORIES</a> <a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/signin}">LOGIN</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<section>
+	<div class="section">
+		<div class="row">
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/dum.jpg}">
+				</div>
+				<div class="name">Dumble</div>
+				<div class="price">Rs.400</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			</br>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/push.jpg}">
+				</div>
+				<div class="name">push upper</div>
+				<div class="price">Rs.5000</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/we.jpg}">
+				</div>
+				<div class="name">Weight Lifter</div>
+				<div class="price">Rs. 900</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/wind.jpg}">
+				</div>
+				<div class="name">Trade Mill</div>
+				<div class="price">Rs. 900</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/str.jpg}">
+				</div>
+				<div class="name">Strength Bar</div>
+				<div class="price">RS. 700</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/hip.jpg}">
+				</div>
+				<div class="name">Hip Abduction</div>
+				<div class="price">Rs.10000</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/sta.png}">
+				</div>
+				<div class="name">Stability ball</div>
+				<div class="price">Rs 780</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/bt.jpg}">
+				</div>
+				<div class="name">Battle Ropes</div>
+				<div class="price">Rs. 800</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/jp.jpg}">
+				</div>
+				<div class="name">Jump Rope</div>
+				<div class="price">Rs. 990</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/hd.jpg}">
+				</div>
+				<div class="name">Hand Grip Exercise</div>
+				<div class="price">Rs. 670</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="footer">
+	<div class="foot">
+		<a th:href="@{/homepage}">HOME</a> </br> <a href="">ABOUT US</a> </br> <a href="">CONTACT
+			US</a>
+	</div>
+</section>
+
+</body>
+</html>

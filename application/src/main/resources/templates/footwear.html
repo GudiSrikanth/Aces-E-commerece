@@ -1,0 +1,127 @@
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="css/footwear.css">
+<nav class="navbar">
+	<div class="nav">
+		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
+		<div class="nav-items">
+			<div class="search">
+				<input type="text" class="search-box"
+					placeholder="search brand, product">
+				<button class="search-btn">search</button>
+			</div>
+			<div class="buttons">
+				<a th:href="@{/categories}">CATEGORIES</a> <a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/signin}">LOGIN</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<section>
+	<div class="section">
+		<div class="row">
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/f1.jpg}">
+				</div>
+				<div class="name">Stylish men cheppals</div>
+				<div class="price">Rs.400</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			</br>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/f2.jpg}">
+				</div>
+				<div class="name">Reebok Shoes</div>
+				<div class="price">Rs.2000</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/ft3.jpg}">
+				</div>
+				<div class="name">Office Cheppal</div>
+				<div class="price">Rs. 900</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/f4.jpg}">
+				</div>
+				<div class="name">Girls sandels</div>
+				<div class="price">Rs.450</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/ft5.jpg}">
+				</div>
+				<div class="name">stylish men cheppal</div>
+				<div class="price">RS. 700</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/f6.jpg}">
+				</div>
+				<div class="name">walking cheppal</div>
+				<div class="price">Rs.180</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/ft7.jpg}">
+				</div>
+				<div class="name">White sneakers</div>
+				<div class="price">Rs 800</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/f8.jpg}">
+				</div>
+				<div class="name">Leather office cheppal</div>
+				<div class="price">Rs.1000</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/f9.jpg}">
+				</div>
+				<div class="name">Soxes</div>
+				<div class="price">Rs.100</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+			<div class="card">
+				<div class="column">
+					<img width="400" height="400" th:src="@{images/f10.jpg}">
+				</div>
+				<div class="name">Grass cheppals</div>
+				<div class="price">Rs. 250</div>
+				<button>Add to cart</button>
+				<button>Buy Now</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="footer">
+	<div class="foot">
+		<a th:href="@{/homepage}">HOME</a> </br> <a href="">ABOUT US</a> </br> <a href="">CONTACT
+			US</a>
+	</div>
+</section>
+
+</body>
+</html>
