@@ -5,7 +5,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Register Page</title>
-
 <nav class="navbar">
 	<div class="nav">
 		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
@@ -28,27 +27,64 @@
 </head>
 
 <body>
-	<div class="createaccount-page">
-		<div class="form">
-			<div class="createaccount">
-				<div class="create-header">
-					<h3>REGISTER A NEW ACCOUNT</h3>
-				</div>
-			</div>
-			<form th:action="@{/registered}" th:object="${user}" 
-			method="post" class="createaccount-form">
-				<input type="text" th:field="*{firstName}" placeholder="first name" required minlength="3" maxlength="20"/></br> 
-				<input type="text" th:field="*{lastName}" placeholder="last name" minlength="1" maxlength="20"/></br>
-				<input type="text" th:field="*{userName}" placeholder="username" required minlength="2" maxlength="20"/></br>
-				<input type="password" th:field="*{password}"	placeholder="password" required minlength="6" maxlength="20"/></br>
-				<input type="tel" th:field="*{mobileNumber}" placeholder="mobile number" required minlength="10" maxlength="10"/>
-				<input type="text" th:field="*{email}" placeholder="email id" required  minlength="10" maxlength="35"/>
-				<button type="submit">Create an account</button>			
-			</form>
-		</div>
-	</div>
-</body>
 
+	<div class="container">
+			<div class="title">Registration</div>
+			<form th:action="@{/registered}" th:object="${user}" 
+			method="post" >
+			  <div class="user-details">
+			  <div>
+				<div class="input-box">
+				<span class="details">First name</span>
+				<input type="text" th:field="*{firstName}" placeholder="First name" required minlength="3" maxlength="20">
+				</div>
+				<div class="input-box">
+				<span class="details">Last name</span>
+				<input type="text" th:field="*{lastName}" placeholder="Last name" minlength="1" maxlength="20" required>
+				</div>
+				<div class="input-box">
+				<span class="details">Email</span>
+				<input type="email" th:field="*{email}" placeholder="Email-id" required  minlength="10" maxlength="35">
+				</div>
+				</div>
+				<div>
+				<div class="input-box">
+				<span class="details">Username</span>
+				<input type="text" th:field="*{userName}" placeholder="Username" required minlength="2" maxlength="20">
+				</div>
+				<div class="input-box">
+				<span class="details">Password</span>
+				<input type="password" th:field="*{password}"	placeholder="Password" required minlength="6" maxlength="20">
+				</div>
+				<div class="input-box">
+				<span class="details">Confirm Password</span>
+				<input type="password" 	placeholder="Confirm-password" required minlength="6" maxlength="20">
+				</div>
+				</div>
+				<div>
+				<div class="input-box">
+				<span class="details">Moblie number</span>
+				<input type="tel" th:field="*{mobileNumber}" placeholder="Mobile-number" required minlength="10" maxlength="10">
+				</div>
+				<div class="input-box">
+				<span class="details">Date of birth</span>
+				<input type="date"  placeholder="Date-of-birth" required >
+				</div>
+				<div class="input-box">
+				<span class="details">Gender</span>
+				<select class="select">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="others">Others</option>
+				</select>
+				</div>
+				</div>	
+			</div>
+				<div class="button">
+				<input type="submit" value="Submit">
+				</div>			
+			</form>
+	</div>
 
 <div class="footer">
 		<div class="container1">
@@ -67,4 +103,8 @@
 			</div>
 		</div>
 	</div>
+
+</body>
+
+
 </html>
