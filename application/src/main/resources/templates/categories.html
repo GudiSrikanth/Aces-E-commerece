@@ -1,5 +1,4 @@
 <html>
-
 <html xmlns:th="http://www.thymeleaf.org">
 <nav class="navbar">
 	<div class="nav">
@@ -11,97 +10,99 @@
 				<button class="search-btn">search</button>
 			</div>
 			<div class="buttons">
-				<a th:href="@{/register}">REGISTER</a>
-				<a th:href="@{/signin}">LOGIN</a>
+				<a th:href="@{/register}">REGISTER</a> <a th:href="@{/signin}">LOGIN</a>
+				<a th:href="@{/homepage}">HOME</a>
 			</div>
 		</div>
 	</div>
 </nav>
 
-<link th:href="@{css/categories.css}" rel="stylesheet"/>
+<link th:href="@{css/products.css}" rel="stylesheet" />
 <head>
-<div class="row">
-<div class="card">
-<div class="column">
-	<img th:src="@{images/electronics.jpg}" style="width: 90%">
-	<div class="container">
-		<h4>
-			<b>Electronics</b>
-		</h4>
-		<a th:href="@{/electronics}">View Products</a>
-	</div>
-	</div>
-</div>
-</div>
-<div class="row">
-<div class="card">
-<div class="column">
-	<img th:src="@{images/children.jpg}" style="width: 90%">
-	<div class="container">
-		<h4>
-			<b>Children</b>
-		</h4>
-		<a th:href="@{/kidsapparel}">View Products</a>
-	</div>
-	</div>
-</div>
-</div>
-<div class="row">
-<div class="card">
-<div class="column">
-	<img th:src="@{images/furniture.jpg}" style="width: 90%">
-	<div class="container">
-		<h4>
-			<b>Furniture</b>
-		</h4>
-		<a th:href="@{/furniture}">View Products</a>
-	</div>
-	</div>
-</div>
-</div>
-<div class="row">
-<div class="card">
-<div class="column">
-	<img th:src="@{images/mensapparel.jpg}" style="width: 90%">
-	<div class="container">
-		<h4>
-			<b>Mens Apparel</b>
-		</h4>
-		<a th:href="@{/menapparel}">View Products</a>
-	</div>
-	</div>
-</div>
-</div>
-<div class="row">
-<div class="card">
-<div class="column">
-	<img th:src="@{images/womensclothing.jpg}" style="width: 90%">
-	<div class="container">
-		<h4>
-			<b>Womens Clothing</b>
-		</h4>
-		<a th:href="@{/womenapparel}">View Products</a>
-	</div>
-	</div>
-</div>
-</div>
+<section>
+	<div class="section">
+		<div class="row">
+			<div class="card">
+				<div class="column">
+					<img th:src="@{images/electronics.jpg}" style="width: 90%">
+					<div class="container">
+						<h4>
+							<b>Electronics</b>
+						</h4>
+						<a th:href="@{/electronics}">View Products</a>
+					</div>
+				</div>
+			</div>
 
-<div class="footer">
-		<div class="container1">
-			<div class="row">
-				<div class="footer-col-3">
-					<nav>
-						<ul>
-							<li><a  th:href="@{/about}" > About us</a></li>
-							<li><a th:href="@{/contactus}" > Contact Us</a></li>
-							<li><a  th:href="@{/}">Terms and condition</a></li>
-							<li><a  th:href="@{/}">Returns and exchange</a></li>
-							<li><a  th:href="@{/}">Private Policy</a></li>
-						</ul>
-					</nav>
+		<div class="card">
+			<div class="column">
+				<img th:src="@{images/children.jpg}" style="width: 90%">
+				<div class="container">
+					<h4>
+						<b>Children</b>
+					</h4>
+					<a th:href="@{/kidsapparel}">View Products</a>
+				</div>
+			</div>
+
+		</div>
+	
+
+	<div class="card">
+		<div class="column">
+			<img th:src="@{images/furniture.jpg}" style="width: 90%">
+			<div class="container">
+				<h4>
+					<b>Furniture</b>
+				</h4>
+				<a th:href="@{/furniture}">View Products</a>
+			</div>
+		</div>
+	</div>
+
+			<div class="card">
+				<div class="column">
+					<img th:src="@{images/mensapparel.jpg}" style="width: 90%">
+					<div class="container">
+						<h4>
+							<b>Mens Apparel</b>
+						</h4>
+						<a th:href="@{/menapparel}">View Products</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="card">
+				<div class="column">
+					<img th:src="@{images/womensclothing.jpg}" style="width: 90%">
+					<div class="container">
+						<h4>
+							<b>Womens Clothing</b>
+						</h4>
+						<a th:href="@{/womenapparel}">View Products</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</section>
+
+<div class="footer">
+	<div class="container1">
+		<div class="row">
+			<div class="footer-col-3">
+				<nav>
+					<ul>
+						<li><a th:href="@{/about}"> About us</a></li>
+						<li><a th:href="@{/contactus}"> Contact Us</a></li>
+						<li><a th:href="@{/}">Terms and condition</a></li>
+						<li><a th:href="@{/}">Returns and exchange</a></li>
+						<li><a th:href="@{/}">Private Policy</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
 </head>
 </html>
