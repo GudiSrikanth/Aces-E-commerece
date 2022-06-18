@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <html>
+
+<nav class="navbar">
+	<div class="nav">
+		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
+		<div class="nav-items">
+			<div class="search">
+				<input type="text" class="search-box"
+					placeholder="search brand, product">
+				<button class="search-btn">search</button>
+			</div>
+			<div class="buttons">
+				<a th:href="@{/categories}">CATEGORIES</a> 
+				<a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/signin}">LOGIN</a>
+				<a th:href="@{/homepage}">HOME</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
 <head>
 	<title>About Us Section</title>
 	<meta charset="utf-8">

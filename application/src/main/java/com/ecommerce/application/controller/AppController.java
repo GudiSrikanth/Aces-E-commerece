@@ -1,4 +1,5 @@
 package com.ecommerce.application.controller;
+
 import com.ecommerce.application.repository.UserRepository;
 import com.ecommerce.application.service.ProductService;
 
@@ -12,22 +13,25 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
 
 @Controller
 public class AppController {
 
 	@Autowired
 	private UserRepository userRepo;
-	
-
 
 	@GetMapping("")
 	public String viewHomePage() {
 		return "homepage";
 	}
-	
+ 
+	@GetMapping("/homepage")
+	public String homePage() {
+		return "homepage";
+	}
+
 	
 	@GetMapping("/register")
 	public String showRegistrationForm(Model model) {
@@ -52,71 +56,75 @@ public class AppController {
 
 		return "coupon";
 	}
-	
+
 	@GetMapping("/electronics")
 	public String listElectronics() {
 
 		return "electronics";
 	}
-	
+
 	@GetMapping("/menapparel")
 	public String listMensApparel() {
-		
+
 		return "menapparel";
 	}
-	
+
 	@GetMapping("/womenapparel")
 	public String listWomensApparel() {
-		
+
 		return "womenapparel";
 	}
-	
+
 	@GetMapping("/kidsapparel")
 	public String listKidsApparel() {
-		
+
 		return "kidsapparel";
 	}
+
 	@GetMapping("/furniture")
 	public String listFurniture() {
-		
+
 		return "furniture";
 	}
-	
+
 	@GetMapping("/signin")
 	public String showLoginPage() {
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		if(authentication==null || authentication instanceof AnonymousAuthenticationToken ) {
 		return "signin";
-		}
-		return "categories";
 	}
-	
+
 	@GetMapping("/resetpswd")
 	public String showResetPswdPage() {
-		
+
 		return "resetpswd";
 	}
-	
-	@GetMapping("/user")
-	public String listUsers(Model model) {
-	   List<User> listUsers = userRepo.findAll();
-	   model.addAttribute("listUsers", listUsers);
-	     
-	    return "user";
-	}
-	
+
 
 	@GetMapping("/about")
-	public String listabout() {
-		
-		return "about";
-}
+	public String listAbout() {
 
+		return "about";
+	}
 
 	@GetMapping("/contactus")
-	public String listcontactus() {
-		
-		return "contactus";
-}
+	public String listContactUs() {
 
+		return "contactus";
+	}
+
+	@PostMapping("/signin")
+	public String login(@ModelAttribute(name = "loginForm") User user, Model m) {
+		String email = user.getEmail();
+		String pass = user.getPassword();
+		System.out.println("from form :" + email + "\n" + pass);
+		User loginUser = userRepo.findByEmail(email);
+		System.out.println("from database: " + loginUser.getEmail() + "\n" + loginUser.getPassword());
+		if (email.equals(loginUser.getEmail()) && pass.equals(loginUser.getPassword())) {
+			m.addAttribute("uname", email);
+			m.addAttribute("pass", pass);
+			return "categories";
+		}
+		m.addAttribute("error", "Incorrect Username & Password");
+		return "signin";
+
+	}
 }

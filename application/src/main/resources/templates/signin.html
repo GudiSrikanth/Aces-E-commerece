@@ -16,7 +16,9 @@
 				<button class="search-btn">search</button>
 			</div>
 			<div class="buttons">
-				<a th:href="@{/categories}">CATEGORIES</a> <a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/categories}">CATEGORIES</a> 
+				<a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/homepage}">HOME</a>
 			</div>
 		</div>
 	</div>
@@ -33,7 +35,7 @@
 					<h3>LOGIN</h3>
 				</div>
 			</div>
-			<form method="post" th:href="@{/categories}" class="login-form">
+			<form method="post" th:action="@{/signin}" th:object="${loginForm}" class="login-form">
 				<input type="text" name="email" placeholder="email" /></br> <input
 					name="password" type="password" placeholder="password" />
 				<button class="button">Login</button>

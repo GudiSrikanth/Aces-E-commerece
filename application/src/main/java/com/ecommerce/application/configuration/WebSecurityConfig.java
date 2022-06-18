@@ -13,7 +13,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.ecommerce.application.service.CustomUserDetailsService;
 
 @Configuration
 @EnableWebSecurity
@@ -21,10 +20,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private DataSource dataSource;
 	
-	 @Bean
-	  public UserDetailsService userDetailsService() {
-	        return new CustomUserDetailsService();
-	  }
 	
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
@@ -47,17 +42,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-            .antMatchers("/user")
-            .permitAll()
-            .and()
+        http
             .formLogin()
                 .usernameParameter("email")
                 .defaultSuccessUrl("/categories")
-                .permitAll()
             .and()
-            .logout().logoutSuccessUrl("/homepage").permitAll();
+            .logout().logoutSuccessUrl("/homepage");
     }
-	
-	
 }
