@@ -104,6 +104,23 @@ public class AppController {
 
 		return "about";
 	}
+	@GetMapping("/index")
+	public String index() {
+
+		return "index";
+	}
+	
+	@GetMapping("/checkout")
+	public String checkout() {
+
+		return "checkout";
+	}
+	
+	@GetMapping("/products")
+	public String products() {
+
+		return "products";
+	}
 
 	@GetMapping("/contactus")
 	public String listContactUs() {

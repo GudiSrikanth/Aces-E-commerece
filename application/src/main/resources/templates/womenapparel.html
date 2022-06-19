@@ -1,9 +1,17 @@
-<html>
-
-<html xmlns:th="http://www.thymeleaf.org"><link rel="stylesheet" href="css/products.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  </head>
+  <body>
 <nav class="navbar">
 	<div class="nav">
-		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
 		<div class="nav-items">
 			<div class="search">
 				<input type="text" class="search-box"
@@ -12,127 +20,226 @@
 			</div>
 			<div class="buttons">
 				<a th:href="@{/categories}">CATEGORIES</a> 
-				<a th:href="@{/register}">REGISTER</a>
 				<a th:href="@{/signin}">LOGIN</a>
 				<a th:href="@{/homepage}">HOME</a>
+				<button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+<header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 			</div>
 		</div>
 	</div>
-</nav>
-
-<section>
-	<div class="section">
-		<div class="row">
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w1.jpg}">
-				</div>
-				<div class="name">Traditional Gown</div>
-				<div class="price">Rs. 5000</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			</br>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w2.jpg}">
-				</div>
-				<div class="name">Traditional Lehenga</div>
-				<div class="price">Rs. 4600</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w3.jpg}">
-				</div>
-				<div class="name">Chudidhar</div>
-				<div class="price">Rs. 1900</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w4.jpg}">
-				</div>
-				<div class="name">Long gown</div>
-				<div class="price">Rs. 2400</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w5.jpg}">
-				</div>
-				<div class="name">Maxi dress</div>
-				<div class="price">RS. 2000</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w6.jpg}">
-				</div>
-				<div class="name">Black Jeans</div>
-				<div class="price">Rs. 1800</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w7.jpg}">
-				</div>
-				<div class="name">Floral Dress</div>
-				<div class="price">Rs 1800</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w8.jpg}">
-				</div>
-				<div class="name">White & pink dress</div>
-				<div class="price">Rs. 800</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w9.jpg}">
-				</div>
-				<div class="name">Jeans</div>
-				<div class="price">Rs. 1590</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400" th:src="@{images/w10.jpg}">
-				</div>
-				<div class="name">Colorful Tshirt</div>
-				<div class="price">Rs. 670</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-		</div>
-	</div>
-</section>
-
+</nav>      
+ <main>
+   
+</header>
+<main class="container page-content">
+  <div class="grid" id="grid">
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w1.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Floral Print Strappy Fit & Flare Maxi Dress</h4>
+        <p class="card__text">33% off</p>
+        <p class="card__price">$20</p>
+        <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="200" height="2000" th:src="@{images/w2.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Printed Fit & Flare Dress with Camisole</h4>
+        <p class="card__text">14% off</p>
+        <p class="card__price">$45</p>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w3.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Abstract Print Flared Fitted Dress</h4>
+        <p class="card__text">17% off</p>
+        <p class="card__price">$29</p>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w4.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Floral Print Crop Top with Pants Set</h4>
+        <p class="card__text">27% off</p>
+        <p class="card__price">$45</p>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w5.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Floral Print V-neck Wrap Top</h4>
+        <p class="card__text">19% off</p>
+        <p class="card__price">$30</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w6.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Printed A-line Dress with Tie-Up Neckline</h4>
+        <p class="card__text">15% off</p>
+        <p class="card__price">$40</p>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w7.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Floral Print Kaftan Dress</h4>
+        <p class="card__text">14% off</p>
+        <p class="card__price">$15</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/w8.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Printed Lehenga Choli with Dupatta</h4>
+        <p class="card__text">25% off</p>
+        <p class="card__price">$69</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/w9.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">AARKE RITU KUMAR Mid-Rise Flat-Front Pants</h4>
+        <p class="card__text">23% off</p>
+        <p class="card__price">$26</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w10.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">MISS CHASE Floral Jumpsuit</h4>
+        <p class="card__text">30% off</p>
+        <p class="card__price">$20</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w11.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">MISS CHASE Skater Dress with Sequinned Collar</h4>
+        <p class="card__text">31% off</p>
+        <p class="card__price">$30</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w12.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">MISS CHASE Stripes Bodycon Dress with Zipper Placket</h4>
+        <p class="card__text">43% off</p>
+        <p class="card__price">$31</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w13.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">MISS CHASE Solid A-line Maxi Dress</h4>
+         <p class="card__text">28% off</p>
+        <p class="card__price">$23</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w14.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">MISS CHASE Skater Dress with Sequins & Lack Yoke</h4>
+        <p class="card__text">29% off </p>
+        <p class="card__price">$17</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w15.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">MISS CHASE Floral Print Top with Front-Slit</h4>
+        <p class="card__text">27% off </p>
+        <p class="card__price">$24</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/w16.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">MISS CHASE Panelled A-line Skirt</h4>
+        <p class="card__text">60% off</p>
+        <p class="card__price">$73</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</main>
 <div class="footer">
-		<div class="container1">
+		<div >
 			<div class="row">
-				<div class="footer-col-3">
+				<div>
 					<nav>
 						<ul>
-							<li><a  th:href="@{/about}" > About us</a></li>
-							<li><a th:href="@{/contactus}" > Contact Us</a></li>
-							<li><a  th:href="@{/}">Terms and condition</a></li>
-							<li><a  th:href="@{/}">Returns and exchange</a></li>
-							<li><a  th:href="@{/}">Private Policy</a></li>
+							<li><a th:href="@{/about}"> About us</a></li>
+							<li><a th:href="@{/contactus}"> Contact Us</a></li>
+							<li><a th:href="@{/}">Terms and condition</a></li>
+							<li><a th:href="@{/}">Returns and exchange</a></li>
+							<li><a th:href="@{/}">Private Policy</a></li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
+ </main>
+  <script  src="./js/script.js"></script>
+  </body>
 </html>

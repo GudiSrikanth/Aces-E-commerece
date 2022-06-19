@@ -1,16 +1,17 @@
 <html>
 <html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
 <script type="text/javascript"
 	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="css/homepage.css">
-
+<link rel="stylesheet" href="css/style.css">
 <script th:src="@{/homepage.js}"></script>
 <nav class="navbar">
 	<div class="nav">
-		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
+		<img th:src="@{images/logo.png}" class="logo" alt="">
 		<div class="nav-items">
 			<div class="search">
 				<input type="text" class="search-box"
@@ -18,8 +19,9 @@
 				<button class="search-btn">search</button>
 			</div>
 			<div class="buttons">
-				<a th:href="@{/categories}">CATEGORIES</a> <a th:href="@{/register}">REGISTER</a>
-				<a th:href="@{/signin}">LOGIN</a>
+				<i class="fa fa-bars" style="font-size:20px;color:black"><a th:href="@{/categories}">CATEGORIES</a></i> 
+				<i class="fa fa-user icon" style="font-size:20px;color:black"><a th:href="@{/register}">REGISTER</a></i>
+				<i class="fa fa-sign-in" style="font-size:20px;color:black"><a th:href="@{/signin}">LOGIN</a></i>
 
 			</div>
 		</div>
@@ -135,7 +137,7 @@
 
 	<!----------------------footer-------------->
 	<div class="footer">
-		<div class="container">
+		<div >
 			<div class="row">
 				<div class="footer-col-3">
 					<nav>

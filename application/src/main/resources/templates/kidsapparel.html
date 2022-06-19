@@ -1,9 +1,17 @@
-<html>
-<html xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="css/products.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  </head>
+  <body>
 <nav class="navbar">
 	<div class="nav">
-		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
 		<div class="nav-items">
 			<div class="search">
 				<input type="text" class="search-box"
@@ -12,136 +20,226 @@
 			</div>
 			<div class="buttons">
 				<a th:href="@{/categories}">CATEGORIES</a> 
-				<a th:href="@{/register}">REGISTER</a>
 				<a th:href="@{/signin}">LOGIN</a>
 				<a th:href="@{/homepage}">HOME</a>
+				<button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+<header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 			</div>
 		</div>
 	</div>
-</nav>
-
-<section>
-	<div class="section">
-		<div class="row">
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k1.jpg}">
-				</div>
-				<div class="name">White skirt & Cream top</div>
-				<div class="price">Rs. 650</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div></br>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k2.jpg}">
-				</div>
-				<div class="name">Hoodie</div>
-				<div class="price">Rs. 634</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k3.jpg}">
-				</div>
-				<div class="name">Waist Coat</div>
-				<div class="price">Rs. 999</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k4.jpg}">
-				</div>
-				<div class="name">Blue Shirt</div>
-				<div class="price">Rs. 1400</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k5.jpg}">
-				</div>
-				<div class="name">Yellow Dress Set</div>
-				<div class="price">RS. 750</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k6.jpg}">
-				</div>
-				<div class="name">T-Shirt</div>
-				<div class="price">Rs. 1000</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k7.jpg}">
-				</div>
-				<div class="name">Shirt</div>
-				<div class="price">Rs 780</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k8.jpg}">
-				</div>
-				<div class="name">White Top</div>
-				<div class="price">Rs. 1800</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k9.jpg}">
-				</div>
-				<div class="name">White Frock</div>
-				<div class="price">Rs. 1200</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/k10.jpg}">
-				</div>
-				<div class="name">Light Blue Frock</div>
-				<div class="price">Rs. 1500</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-		</div>
-	</div>
-</section>
-
+</nav>      
+ <main>
+   
+</header>
+<main class="container page-content">
+  <div class="grid" id="grid">
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k1.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Boys Multi Coloured Text Print T-shirt And Shorts Set</h4>
+        <p class="card__text">23% off</p>
+        <p class="card__price">$10</p>
+        <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="200" height="2000" th:src="@{images/k2.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Boys Red Graphic Print Jeans Set</h4>
+        <p class="card__text">6% off</p>
+        <p class="card__price">$18</p>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k3.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Boys Orange Text Print Tee, Jacket and Jogger Set</h4>
+        <p class="card__text">11% off</p>
+        <p class="card__price">$9</p>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k4.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Girls Pink Sleeveless Solid Gown</h4>
+        <p class="card__text">21% off</p>
+        <p class="card__price">$45</p>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k5.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Girls Black Sleeveless Solid Gown</h4>
+        <p class="card__text">10% off</p>
+        <p class="card__price">$40</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k6.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Girls Blue Sleeveless Applique Floral Party Dress</h4>
+        <p class="card__text">15% off</p>
+        <p class="card__price">$35</p>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k7.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Girls Black Sleeveless Solid Party Dress</h4>
+        <p class="card__text">4% off</p>
+        <p class="card__price">$25</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/k8.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Unisex Blue Graphic Print Tee</h4>
+        <p class="card__text">5% off</p>
+        <p class="card__price">$3</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/k9.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Girls Multi Coloured Stripe Print Casual Dress</h4>
+        <p class="card__text">33% off</p>
+        <p class="card__price">$6</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k10.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Boys Gray All-Over Print Blazer, Waistcoat, Pant, Bow and Brooch Set</h4>
+        <p class="card__text">30% off</p>
+        <p class="card__price">$120</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k11.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Boys Navy Solid Formal Set</h4>
+        <p class="card__text">71% off</p>
+        <p class="card__price">$90</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k12.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Boys Maroon Solid Kurta and Dhoti Set</h4>
+        <p class="card__text">43% off</p>
+        <p class="card__price">$21</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k13.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Boys Black Ethnic Print Kurta Pajama Set</h4>
+         <p class="card__text">22% off</p>
+        <p class="card__price">$50</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k14.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Girls Blue Floral Print Salwar And Kameez With Dupatta Set</h4>
+        <p class="card__text">19% off </p>
+        <p class="card__price">$57</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k15.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Girls Red Ethnic Print Lehenga and Choli Set</h4>
+        <p class="card__text">17% off </p>
+        <p class="card__price">$10</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/k16.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Girls Navy Short-Sleeve Solid Party Dress</h4>
+        <p class="card__text">10% off</p>
+        <p class="card__price">$23</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</main>
 <div class="footer">
-		<div class="container1">
+		<div >
 			<div class="row">
-				<div class="footer-col-3">
+				<div>
 					<nav>
 						<ul>
-							<li><a  th:href="@{/about}" > About us</a></li>
-							<li><a th:href="@{/contactus}" > Contact Us</a></li>
-							<li><a  th:href="@{/}">Terms and condition</a></li>
-							<li><a  th:href="@{/}">Returns and exchange</a></li>
-							<li><a  th:href="@{/}">Private Policy</a></li>
+							<li><a th:href="@{/about}"> About us</a></li>
+							<li><a th:href="@{/contactus}"> Contact Us</a></li>
+							<li><a th:href="@{/}">Terms and condition</a></li>
+							<li><a th:href="@{/}">Returns and exchange</a></li>
+							<li><a th:href="@{/}">Private Policy</a></li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
+ </main>
+  <script  src="./js/script.js"></script>
+  </body>
 </html>

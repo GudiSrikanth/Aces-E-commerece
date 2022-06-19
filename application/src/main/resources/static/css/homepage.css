@@ -14,10 +14,11 @@
 	width: 100%;
 	background: #f5f5f5;
 	z-index: 9;
+	
 }
 
 .nav {
-	padding: 10px 10vw;
+	padding: 10px 200px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -27,7 +28,7 @@
 }
 
 .logo {
-	height: 60px;
+	height: 100px;
 }
 
 
@@ -36,7 +37,7 @@
 	align-items: center;
 }
 .search {
-	width: 500px;
+	width: 700px;
 	display: flex;
 }
 
@@ -127,7 +128,10 @@
     transition: background 0.5s;
 
 }
-
+a.buttons{
+            text-decoration: none;
+            
+}
 .slideshow-container {
 	max-width: 1000px;
 	position: relative;
@@ -159,14 +163,16 @@
 }
 
 .footer{
-    background: #D3D3D3;
+    background: #f5f5f5;
     color: #000;
     font-size: 14px;
     padding: 60px 0 20px;
+    text-decoration: none;
+    
 }
 
 .container{
-    max-width: 1300px;
+    max-width: 1000px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;

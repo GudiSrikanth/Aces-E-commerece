@@ -1,146 +1,248 @@
-<html>
-<html xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="css/products.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+  </head>
+  <body>
 <nav class="navbar">
 	<div class="nav">
-		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
 		<div class="nav-items">
+			<div class="image">
+			<img th:src="@{images/logo.png}" class="logo" alt="">
+			</div>
 			<div class="search">
 				<input type="text" class="search-box"
 					placeholder="search brand, product">
 				<button class="search-btn">search</button>
 			</div>
 			<div class="buttons">
-				<a th:href="@{/categories}">CATEGORIES</a> <a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/categories}">CATEGORIES</a> 
 				<a th:href="@{/signin}">LOGIN</a>
 				<a th:href="@{/homepage}">HOME</a>
+			<button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+
+<header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a th:href="@{/checkout}">Check out</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 			</div>
 		</div>
 	</div>
-</nav>
-
-<section>
-	<div class="section">
-		<div class="row">
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e1.jpg}">
-				</div>
-				<div class="name">Oven</div>
-				<div class="price">Rs. 5000</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div></br>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e2.jpg}">
-				</div>
-				<div class="name">Refridgerator</div>
-				<div class="price">Rs. 16300</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e3.jpg}">
-				</div>
-				<div class="name">Mixer</div>
-				<div class="price">Rs. 3900</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e4.jpg}">
-				</div>
-				<div class="name">Iron box</div>
-				<div class="price">Rs. 1400</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e5.jpg}">
-				</div>
-				<div class="name">Geyser</div>
-				<div class="price">RS. 12000</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e6.png}">
-				</div>
-				<div class="name">Induction Stove</div>
-				<div class="price">Rs. 1800</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e7.jpg}">
-				</div>
-				<div class="name">Toaster</div>
-				<div class="price">Rs 1280</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e8.jpg}">
-				</div>
-				<div class="name">Mobile</div>
-				<div class="price">Rs. 18000</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e9.png}">
-				</div>
-				<div class="name">Bluetooth Earphones</div>
-				<div class="price">Rs. 1990</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="400" height="400"
-						th:src="@{images/e10.jpg}">
-				</div>
-				<div class="name">Ear pods</div>
-				<div class="price">Rs. 2900</div>
-				<button>Add to cart</button>
-				<button>Buy Now</button>
-			</div>
-		</div>
-	</div>
-</section>
-
+</nav>      
+ <main>
+   
+</header>
+<main class="container page-content">
+  <div class="grid" id="grid">
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e8.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Sony Bluetooth Headphone NC WH-1000XM4BM (Black)</h4>
+        <p class="card__text">33% off</p>
+        <p class="card__price">$121</p>
+        <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="200" height="2000" th:src="@{images/e9.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Apple AirPods With Charging Case</h4>
+        <p class="card__text">66% off</p>
+        <p class="card__price">$221</p>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e10.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Apple AirPods (3rd Generation) With MagSafe Charging Case</h4>
+        <p class="card__text">11% off</p>
+        <p class="card__price">$150</p>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e11.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Panasonic Ultra HD (4K) Smart Android LED 65 inch(164 cm)</h4>
+        <p class="card__text">21% off</p>
+        <p class="card__price">$450</p>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e14.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Samsung 8.5 Kg Semi Automatic Top Load Washing Machine</h4>
+        <p class="card__text">10% off</p>
+        <p class="card__price">$400</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e16.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Acer Aspire 5 A514-54 NX.A2BSI.003 Laptop</h4>
+        <p class="card__text">35% off</p>
+        <p class="card__price">$350</p>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e12.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">MI LED 32 inch(80 cm) UA32T4050</h4>
+        <p class="card__text">4% off</p>
+        <p class="card__price">$250</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/e15.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Samsung 6 Kg  Automatic Top Load Washing Machine</h4>
+        <p class="card__text">25% off</p>
+        <p class="card__price">$270</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/e13.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Samsung LED 32 inch(80 cm) UA32T4050</h4>
+        <p class="card__text">33% off</p>
+        <p class="card__price">$300</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e17.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Acer Aspire 3 A315-58 NX.ADDSI.00A Laptop</h4>
+        <p class="card__text">30% off</p>
+        <p class="card__price">$121</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e18.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Apple Laptop (16 GB RAM, 2 TB, Gray)</h4>
+        <p class="card__text">71% off</p>
+        <p class="card__price">$900</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e19.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Samsung A22 5G (6 GB RAM, 128 GB ROM, Gray)</h4>
+        <p class="card__text">43% off</p>
+        <p class="card__price">$210</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e20.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Noise Smart ColorFit Beat Watch with Customisable</h4>
+         <p class="card__text">22% off</p>
+        <p class="card__price">$180</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e21.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Display Unit - Nikon D5600 DSLR Camera (AF-PDX 18-55M)</h4>
+        
+        <p class="card__price">$121</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e6.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">HP Ink Tank 419 All in One Wireless Color Printer</h4>
+        <p class="card__text">17% off </p>
+        <p class="card__price">$100</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/e7.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Samsung Galaxy Tab A7 26.31 cm</h4>
+        <p class="card__text">10% off</p>
+        <p class="card__price">$230</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</main>
 <div class="footer">
-		<div class="container1">
+		<div >
 			<div class="row">
-				<div class="footer-col-3">
+				<div>
 					<nav>
 						<ul>
-							<li><a  th:href="@{/about}" > About us</a></li>
-							<li><a th:href="@{/contactus}" > Contact Us</a></li>
-							<li><a  th:href="@{/}">Terms and condition</a></li>
-							<li><a  th:href="@{/}">Returns and exchange</a></li>
-							<li><a  th:href="@{/}">Private Policy</a></li>
+							<li><a th:href="@{/about}"> About us</a></li>
+							<li><a th:href="@{/contactus}"> Contact Us</a></li>
+							<li><a th:href="@{/}">Terms and condition</a></li>
+							<li><a th:href="@{/}">Returns and exchange</a></li>
+							<li><a th:href="@{/}">Private Policy</a></li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
+ </main>
+  <script  src="./js/script.js"></script>
+  </body>
 </html>

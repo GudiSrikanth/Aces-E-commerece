@@ -1,10 +1,17 @@
-<html>
-
-<html xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="css/products.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  </head>
+  <body>
 <nav class="navbar">
 	<div class="nav">
-		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
 		<div class="nav-items">
 			<div class="search">
 				<input type="text" class="search-box"
@@ -13,253 +20,226 @@
 			</div>
 			<div class="buttons">
 				<a th:href="@{/categories}">CATEGORIES</a> 
-				<a th:href="@{/register}">REGISTER</a>
 				<a th:href="@{/signin}">LOGIN</a>
 				<a th:href="@{/homepage}">HOME</a>
+				<button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+<header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 			</div>
 		</div>
 	</div>
-</nav>
-
-<section>
-	<div class="section">
-		<div class="row">
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m1.jpg}">
-				</div>
-				<div class="name">Blue coat</div>
-				<div class="price" style=color:green>Rs. 1500/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			</br>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m26.jpg}">
-				</div>
-				<div class="name">Blue Shirt</div>
-				<div class="price" style=color:green>Rs. 634/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m3.jpg}">
-				</div>
-				<div class="name">White T-shirt</div>
-				<div class="price" style=color:green>Rs. 900/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m4.jpg}">
-				</div>
-				<div class="name">Full Sleeves shirt</div>
-				<div class="price" style=color:green>Rs. 900/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m5.jpg}">
-				</div>
-				<div class="name">Trouser</div>
-				<div class="price" style=color:green>RS. 700/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m6.jpg}">
-				</div>
-				<div class="name">Blue T-shirt</div>
-				<div class="price" style=color:green>Rs. 800/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m7.jpg}">
-				</div>
-				<div class="name">Hoodie</div>
-				<div class="price" style=color:green>Rs 780/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m8.jpg}">
-				</div>
-				<div class="name">Jeans</div>
-				<div class="price" style=color:green>Rs. 800/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m9.jpg}">
-				</div>
-				<div class="name">Tshirt</div>
-				<div class="price" style=color:green>Rs. 990/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m10.jpg}">
-				</div>
-				<div class="name">Colorful Tshirt</div>
-				<div class="price" style=color:green>Rs. 670/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m11.jpg}">
-				</div>
-				<div class="name">Rare Rabbit Hosey</div>
-				<div class="price" style=color:green>Rs. 1980/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m12.jpg}">
-				</div>
-				<div class="name">Mens winter fashion</div>
-				<div class="price" style=color:green>Rs. 2200/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m13.jpg}">
-				</div>
-				<div class="name">Rare Rabbit Ascot</div>
-				<div class="price" style=color:green>Rs. 1500/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m14.jpg}">
-				</div>
-				<div class="name">Rare Rabbit Morris</div>
-				<div class="price" style=color:green>Rs. 2100/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m15.jpg}">
-				</div>
-				<div class="name">Rare Rabbit Sketchy</div>
-				<div class="price" style=color:green>Rs. 2000/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m16.jpg}">
-				</div>
-				<div class="name">Wisdom Apparel Taiwan</div>
-				<div class="price" style=color:green>Rs. 2500/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m17.jpg}">
-				</div>
-				<div class="name">Latest Winter Mens Fashion</div>
-				<div class="price" style=color:green>Rs. 2000/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m18.jpg}">
-				</div>
-				<div class="name">Winter Jacket</div>
-				<div class="price" style=color:green>Rs. 1800/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m19.jpg}">
-				</div>
-				<div class="name">Navy Blue Coffee</div>
-				<div class="price" style=color:green>Rs. 1600/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m20.jpg}">
-				</div>
-				<div class="name">Beardo Hoodie</div>
-				<div class="price" style=color:green>Rs. 1500/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m21.jpg}">
-				</div>
-				<div class="name">Full Sleeve Casual jackets</div>
-				<div class="price" style=color:green>Rs. 1100/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m22.jpg}">
-				</div>
-				<div class="name">Mystic Play</div>
-				<div class="price" style=color:green>Rs. 1300/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m23.jpg}">
-				</div>
-				<div class="name">Orangr Magenta</div>
-				<div class="price" style=color:green>Rs. 900/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-			<div class="card">
-				<div class="column">
-					<img width="300" height="400" th:src="@{images/m25.jpg}">
-				</div>
-				<div class="name">Ward Robe Essentials</div>
-				<div class="price" style=color:green>Rs. 1800/-</div>
-				<button class=btn style=color:blue>Add to cart</button>
-				<button class=btn style=color:blue>Buy Now</button>
-			</div>
-		</div>
-	</div>
-</section>
-
+</nav>      
+ <main>
+   
+</header>
+<main class="container page-content">
+  <div class="grid" id="grid">
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m1.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">G STAR RAW Dunda Polo T-shirt</h4>
+        <p class="card__text">33% off</p>
+        <p class="card__price">$50</p>
+        <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="200" height="2000" th:src="@{images/m2.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">G STAR RAW Logo Print Crew-Neck T-shirt</h4>
+        <p class="card__text">6% off</p>
+        <p class="card__price">$45</p>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m3.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Marine Checked Slim Fit Shirt</h4>
+        <p class="card__text">11% off</p>
+        <p class="card__price">$39</p>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m4.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Hoodie with Kangaroo Pocket</h4>
+        <p class="card__text">21% off</p>
+        <p class="card__price">$45</p>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m5.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">D-Staq 3D Lightly-Washed 5-Pocket Slim Jeans</h4>
+        <p class="card__text">10% off</p>
+        <p class="card__price">$40</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m6.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">BULLMER Straight Track Pants with Insert Pockets</h4>
+        <p class="card__text">15% off</p>
+        <p class="card__price">$10</p>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m7.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">BULLMER Pack of 3 Graphic Print T-shirt</h4>
+        <p class="card__text">14% off</p>
+        <p class="card__price">$15</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/m8.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Mid-Wash Slim Jeans</h4>
+        <p class="card__text">5% off</p>
+        <p class="card__price">$23</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/m9.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Slim Fit Flat-Front Trousers with Insert Pockets</h4>
+        <p class="card__text">33% off</p>
+        <p class="card__price">$36</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m10.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Checked Slim Fit Shirt with Patch Pocket</h4>
+        <p class="card__text">30% off</p>
+        <p class="card__price">$70</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m11.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Striped Slim Fit Shirt with Patch Pocket</h4>
+        <p class="card__text">31% off</p>
+        <p class="card__price">$90</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m12.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Checked Slim Fit Shirt with Patch Pocket</h4>
+        <p class="card__text">43% off</p>
+        <p class="card__price">$31</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m13.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Woven Shorts with Slip Pockets</h4>
+         <p class="card__text">22% off</p>
+        <p class="card__price">$20</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m14.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Checked Slim Fit Shirt</h4>
+        <p class="card__text">19% off </p>
+        <p class="card__price">$27</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m15.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Printed Slim Fit Shirt with Patch Pocket</h4>
+        <p class="card__text">37% off </p>
+        <p class="card__price">$20</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/m16.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">ARROW SPORTS Cotton Polo T-shirt with Ribbed Hems</h4>
+        <p class="card__text">20% off</p>
+        <p class="card__price">$23</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</main>
 <div class="footer">
-		<div class="container1">
+		<div >
 			<div class="row">
-				<div class="footer-col-3">
+				<div>
 					<nav>
 						<ul>
-							<li><a  th:href="@{/about}" > About us</a></li>
-							<li><a th:href="@{/contactus}" > Contact Us</a></li>
-							<li><a  th:href="@{/}">Terms and condition</a></li>
-							<li><a  th:href="@{/}">Returns and exchange</a></li>
-							<li><a  th:href="@{/}">Private Policy</a></li>
+							<li><a th:href="@{/about}"> About us</a></li>
+							<li><a th:href="@{/contactus}"> Contact Us</a></li>
+							<li><a th:href="@{/}">Terms and condition</a></li>
+							<li><a th:href="@{/}">Returns and exchange</a></li>
+							<li><a th:href="@{/}">Private Policy</a></li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
+ </main>
+  <script  src="./js/script.js"></script>
+  </body>
 </html>

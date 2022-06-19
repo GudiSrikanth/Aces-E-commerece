@@ -1,9 +1,17 @@
-<html>
-<html xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="css/products.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  </head>
+  <body>
 <nav class="navbar">
 	<div class="nav">
-		<img th:src="@{images/Acesimage.png}" class="logo" alt="">
 		<div class="nav-items">
 			<div class="search">
 				<input type="text" class="search-box"
@@ -11,255 +19,227 @@
 				<button class="search-btn">search</button>
 			</div>
 			<div class="buttons">
-				<a th:href="@{/categories}">CATEGORIES</a>
-			    <a th:href="@{/register}">REGISTER</a>
+				<a th:href="@{/categories}">CATEGORIES</a> 
 				<a th:href="@{/signin}">LOGIN</a>
-			    <a th:href="@{/homepage}">HOME</a>
+				<a th:href="@{/homepage}">HOME</a>
+				<button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+<header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 			</div>
 		</div>
 	</div>
-</nav>
-<section>
-	<divclass="section">
-	<div class="row">
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f1.jpg}">
-			</div>
-			<div class="name">Sofa Set</div>
-			<div class="price" style="color: green">Rs.25000/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f2.jpg}">
-			</div>
-			<div class="name">Bed</div>
-			<div class="price" style="color: green">Rs.26300/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f12.jpg}">
-			</div>
-			<div class="name">Style Wood</div>
-			<div class="price" style="color: green">Rs.6300/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f3.jpg}">
-			</div>
-			<div class="name">Tea Stand</div>
-			<div class="price" style="color: green">Rs.2900/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f4.jpg}">
-			</div>
-			<div class="name">Cup Board</div>
-			<div class="price" style="color: green">Rs.7400/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f12.jpg}">
-			</div>
-			<div class="name">Style Wood</div>
-			<div class="price" style="color: green">Rs.6300/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f6.jpg}">
-			</div>
-			<div class="name">Stand</div>
-			<div class="price" style="color: green">Rs.8000/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f7.jpg}">
-			</div>
-			<div class="name">Dining table</div>
-			<div class="price" style="color: green">Rs.7800/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f8.jpg}">
-			</div>
-			<div class="name">Chair</div>
-			<div class="price" style="color: green">Rs.1800/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f9.jpg}">
-			</div>
-			<div class="name">Computer Table</div>
-			<div class="price" style="color: green">Rs.9900/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f13.jpg}">
-			</div>
-			<div class="name">short Chair</div>
-			<div class="price" style="color: green">Rs.8900/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f15.jpg}">
-			</div>
-			<div class="name">TV table</div>
-			<div class="price" style="color: green">Rs.7900/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f17.jpg}">
-			</div>
-			<div class="name">Tim Beravenue</div>
-			<div class="price" style="color: green">Rs.1900/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f24.jpg}">
-			</div>
-			<div class="name">Dania Furniture</div>
-			<div class="price" style="color: green">Rs.15205/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f21.jpg}">
-			</div>
-			<div class="name">All-Free Home Furniture</div>
-			<div class="price" style="color: green">Rs.5900/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f23.jpg}">
-			</div>
-			<div class="name">Crate and Barrel</div>
-			<div class="price" style="color: green">Rs.12000/-</div>
-
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f22.jpg}">
-			</div>
-			<div class="name">Article</div>
-			<div class="price" style="color: green">Rs.15000/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f20.jpg}">
-			</div>
-			<div class="name">Furniture123</div>
-			<div class="price" style="color: green">Rs.8500/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f26.jpg}">
-			</div>
-			<div class="name">More Dark Wodden</div>
-			<div class="price" style="color: green">Rs.10000/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f19.jpg}">
-			</div>
-			<div class="name">Scandinavian</div>
-			<div class="price" style="color: green">Rs.2900/-</div>
-
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f16.jpg}">
-			</div>
-			<div class="name">Home Furniture</div>
-			<div class="price" style="color: green">Rs.19900/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f14.jpg}">
-			</div>
-			<div class="name">Modern Scandinavition</div>
-			<div class="price" style="color: green">Rs.5000/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f25.jpg}">
-			</div>
-			<div class="name">Dark Wooden</div>
-			<div class="price" style="color: green">Rs.11900/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-		</div>
-		<div class="card">
-			<div class="column">
-				<img width="300" height="300" th:src="@{images/f10.jpg}">
-			</div>
-			<div class="name">Wooden Chair</div>
-			<div class="price" style="color: green">Rs.3000/-</div>
-			<button class="btn" style="color: blue">Add to cart</button>
-			<button class="btn" style="color: blue">Buy Now</button>
-
-		</div>
-	</div>
-	</div>
-</section>
-
+</nav>      
+ <main>
+   
+</header>
+<main class="container page-content">
+  <div class="grid" id="grid">
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f1.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Astonishing 3 Seater Sofa In Light Blue Colour</h4>
+        <p class="card__text">38% off</p>
+        <p class="card__price">$200</p>
+        <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="200" height="2000" th:src="@{images/f2.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Darcy 2 Seater Sofa In Blush Pink Colour</h4>
+        <p class="card__text">24% off</p>
+        <p class="card__price">$450</p>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f3.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Distinguished RHS 2 Seater Sofa Withlounger In Green Colour</h4>
+        <p class="card__text">17% off</p>
+        <p class="card__price">$800</p>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f4.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Astonishing 3 Seater Sofa In Cadet Blue Colour</h4>
+        <p class="card__text">27% off</p>
+        <p class="card__price">$358</p>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f5.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Classic Handcrafted Muddha Chair in Multi Colour</h4>
+        <p class="card__text">19% off</p>
+        <p class="card__price">$70</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f6.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Kalki Solid Wood Sideboard In Provincial Teak Finish</h4>
+        <p class="card__text">15% off</p>
+        <p class="card__price">$120</p>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f7.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Kalki Solid Wood King Size Bed In Honey Oak Finish</h4>
+        <p class="card__text">24% off</p>
+        <p class="card__price">$150</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/f8.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Kalki Solid Wood Bedside Table In Honey Oak Finish</h4>
+        <p class="card__text">25% off</p>
+        <p class="card__price">$187</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <div class="card">
+      <img width="300" height="300" th:src="@{images/f9.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Advait Solid Wood Cabinet In Multicolour</h4>
+        <p class="card__text">13% off</p>
+        <p class="card__price">$260</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f10.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Forlan Solid Wood Hand-Painted Nest Of Table</h4>
+        <p class="card__text">30% off</p>
+        <p class="card__price">$200</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f11.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Asher Solid Wood End Table Hand-Painted</h4>
+        <p class="card__text">31% off</p>
+        <p class="card__price">$370</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f12.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Daivik Solid Wood Sideboard In Multicolour Colour</h4>
+        <p class="card__text">43% off</p>
+        <p class="card__price">$891</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f13.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Prato C Table with Black Glass & Golden Base</h4>
+         <p class="card__text">28% off</p>
+        <p class="card__price">$230</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f14.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Alpha Coffee Table set with Pouffe in Natural Acacia Finish</h4>
+        <p class="card__text">19% off </p>
+        <p class="card__price">$170</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f15.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Adams Center Table Super White Colour</h4>
+        <p class="card__text">27% off </p>
+        <p class="card__price">$264</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+    <div class="card">
+      <img width="300" height="300" th:src="@{images/f16.jpg}">
+      <div class="card__info">
+        <h4 class="card__title">Tilli Console Table Black Colour</h4>
+        <p class="card__text">30% off</p>
+        <p class="card__price">$173</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</main>
 <div class="footer">
-	<div class="container1">
-		<div class="row">
-			<div class="footer-col-3">
-				<nav>
-					<ul>
-						<li><a th:href="@{/about}"> About us</a></li>
-						<li><a th:href="@{/contactus}"> Contact Us</a></li>
-						<li><a th:href="@{/}">Terms and condition</a></li>
-						<li><a th:href="@{/}">Returns and exchange</a></li>
-						<li><a th:href="@{/}">Private Policy</a></li>
-					</ul>
-				</nav>
+		<div >
+			<div class="row">
+				<div>
+					<nav>
+						<ul>
+							<li><a th:href="@{/about}"> About us</a></li>
+							<li><a th:href="@{/contactus}"> Contact Us</a></li>
+							<li><a th:href="@{/}">Terms and condition</a></li>
+							<li><a th:href="@{/}">Returns and exchange</a></li>
+							<li><a th:href="@{/}">Private Policy</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+ </main>
+  <script  src="./js/script.js"></script>
+  </body>
 </html>
