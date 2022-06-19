@@ -36,10 +36,15 @@
 				</div>
 			</div>
 			<form method="post" th:action="@{/signin}" th:object="${loginForm}" class="login-form">
-				<input type="text" name="email" placeholder="email" /></br> <input
-					name="password" type="password" placeholder="password" />
+				<div>
+				<span class="details">Email</span>
+				<input type="text" name="email" placeholder="email" /><br>
+			
+				<span class="details">Password</span>
+				 <input name="password" type="password" placeholder="password" />
+				 </div><br>
 				<button class="button">Login</button>
-			</form>
+			</form><br>
 			<a class="message">Not registered? <a th:href="@{/register}">Create
 					an account</a></a></br> <br> <a th:href="@{/resetpswd}">Forgot
 				Password?</a>
