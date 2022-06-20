@@ -1,7 +1,6 @@
 package com.ecommerce.application.controller;
 
 import com.ecommerce.application.repository.UserRepository;
-import com.ecommerce.application.service.ProductService;
 
 import java.util.List;
 import com.ecommerce.application.model.User;
@@ -126,9 +125,13 @@ public class AppController {
 	public String login(@ModelAttribute(name = "loginForm") User user, Model m) {
 		String email = user.getEmail();
 		String pass = user.getPassword();
+		
 		//System.out.println("from form :" + email + "\n" + pass);
+		
 		User loginUser = userRepo.findByEmail(email);
+		
 		//System.out.println("from database: " + loginUser.getEmail() + "\n" + loginUser.getPassword());
+		
 		if (email.equals(loginUser.getEmail()) && pass.equals(loginUser.getPassword())) {
 			m.addAttribute("uname", email);
 			m.addAttribute("pass", pass);
