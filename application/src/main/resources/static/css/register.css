@@ -102,7 +102,7 @@ body{
     height:100vh;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg,skyblue 40%,rgb(255, 0, 255));
+  	background-color: aqua;
 }
 .container{
 	margin-left:40;
