@@ -6,26 +6,26 @@
     <meta name="author" content="CodeHim">
     
     
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-<nav class="navbar">
-	<div class="nav">
-		<div class="nav-items">
-			<div class="search">
-				<input type="text" class="search-box"
-					placeholder="search brand, product">
-				<button class="search-btn">search</button>
-			</div>
-			<div class="buttons">
-				<a th:href="@{/categories}">CATEGORIES</a> 
-				<a th:href="@{/signin}">LOGIN</a>
-				<a th:href="@{/homepage}">HOME</a>
-				<button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
-</svg> Your Cart</button>
-<header class="header">
+<div class="header">
+<nav>
+<img th:src="@{images/logo.png}" class="logo" alt="">
+<ul class="nav-links">
+<li><a th:href="@{/categories}">CATEGORIES</a></li>
+<li><a th:href="@{/homepage}">HOME</a></li>
+<li><a th:href="@{/}">LOGOUT</a></li>
+</ul>
+</nav>
+</div>
+			
+
+<header class="header1">
   <div class="container header__top">
     <div class="header__logo">
     </div>
@@ -45,7 +45,7 @@
               <tbody></tbody>
             </table>
             <p class="total-container" id="total-price"></p>
-            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a th:href="@{/checkout}"  class="cart-btn">Check out</a>
             <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
           </div>
         </li>
@@ -59,6 +59,9 @@
  <main>
    
 </header>
+
+<button class="header__cart-btn" id="toggle-cart-btn"> Your Cart</button>
+
 <main class="container page-content">
   <div class="grid" id="grid">
     <div class="card">
@@ -222,24 +225,32 @@
     </div>
   </div>
 </main>
-<div class="footer">
-		<div >
-			<div class="row">
-				<div>
-					<nav>
-						<ul>
-							<li><a th:href="@{/about}"> About us</a></li>
-							<li><a th:href="@{/contactus}"> Contact Us</a></li>
-							<li><a th:href="@{/}">Terms and condition</a></li>
-							<li><a th:href="@{/}">Returns and exchange</a></li>
-							<li><a th:href="@{/}">Private Policy</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
- </main>
   <script  src="./js/script.js"></script>
+<footer>
+        <div class="footer-content">
+            <h3>Foolish Developer</h3>
+            <p>Raj Template is a blog website where you will find great tutorials on web design and development. Here each tutorial is beautifully described step by step with the required source code.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">Foolish Developer</a>  </p>
+                    <div class="footer-menu">
+                      <ul class="f-menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Blog</a></li>
+                      </ul>
+                    </div>
+        </div>
+
+    </footer>
+
   </body>
 </html>

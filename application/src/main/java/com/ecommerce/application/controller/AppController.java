@@ -114,6 +114,17 @@ public class AppController {
 
 		return "checkout";
 	}
+	
+	@GetMapping("/products")
+	public String products() {
+
+		return "products";
+	}
+	@GetMapping("/cart")
+	public String cart() {
+
+		return "cart";
+	}
 
 	@GetMapping("/contactus")
 	public String listContactUs() {

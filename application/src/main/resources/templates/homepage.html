@@ -1,37 +1,34 @@
 <html>
 <html xmlns:th="http://www.thymeleaf.org">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
 <script type="text/javascript"
 	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="css/homepage.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script th:src="@{/homepage.js}"></script>
-<nav class="navbar">
-	<div class="nav">
-		<img th:src="@{images/logo.png}" class="logo" alt="">
-		<div class="nav-items">
-			<div class="search">
-				<input type="text" class="search-box"
-					placeholder="search brand, product">
-				<button class="search-btn">search</button>
-			</div>
-			<div class="buttons">
-				<i class="fa fa-bars" style="font-size:20px;color:black"><a th:href="@{/categories}">CATEGORIES</a></i> 
-				<i class="fa fa-user icon" style="font-size:20px;color:black"><a th:href="@{/register}">REGISTER</a></i>
-				<i class="fa fa-sign-in" style="font-size:20px;color:black"><a th:href="@{/signin}">LOGIN</a></i>
-
-			</div>
-		</div>
-	</div>
+<div class="header">
+<nav>
+<img th:src="@{images/logo.png}" class="logo" alt="">
+<ul class="nav-links">
+<li><a th:href="@{/categories}">CATEGORIES</a></li>
+<li><a th:href="@{/register}">REGISTERED</a></li>
+<li><a th:href="@{/homepage}">HOME</a></li>
+<li><a th:href="@{/signin}">LOGIN</a></li>
+</ul>
 </nav>
+</div>
 
 <body>
-
-
-	<div class="header">
+<div>
+<marquee class="mar"> THE BEST E-COMMERECE IS ACES......</marquee></div>
+	<div class="header2">
 		<div class="row">
 			<div class="col-2">
 				<h1>New Arrivals</h1>
@@ -136,22 +133,30 @@
 	</div>
 
 	<!----------------------footer-------------->
-	<div class="footer">
-		<div >
-			<div class="row">
-				<div class="footer-col-3">
-					<nav>
-						<ul>
-							<li><a th:href="@{/about}"> About us</a></li>
-							<li><a th:href="@{/contactus}"> Contact Us</a></li>
-							<li><a th:href="@{/}">Terms and condition</a></li>
-							<li><a th:href="@{/}">Returns and exchange</a></li>
-							<li><a th:href="@{/}">Private Policy</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
+	<footer>
+        <div class="footer-content">
+            <h3>Foolish Developer</h3>
+            <p>Raj Template is a blog website where you will find great tutorials on web design and development. Here each tutorial is beautifully described step by step with the required source code.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">Foolish Developer</a>  </p>
+                    <div class="footer-menu">
+                      <ul class="f-menu">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Blog</a></li>
+                      </ul>
+                    </div>
+        </div>
+
+    </footer>
 </body>
 </html>

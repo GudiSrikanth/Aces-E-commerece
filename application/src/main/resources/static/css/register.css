@@ -9,6 +9,12 @@ header a img {
 	width: 134px;
 	margin-top: 4px;
 }
+.details {
+	color: #ea332a;
+}
+.title{
+	color: #ea332a;
+}
 .navbar {
 	position: sticky;
 	top: 0;
@@ -182,7 +188,7 @@ form .button input{
     font-weight: 500;
     border-radius: 5px;
     left: 1px;
-    background: linear-gradient(135deg,#17dfe6 60%,rgb(255, 0, 255));
+    background-color: #ea332a;
 }
 @media (max-wdth:58px){
     .container{
@@ -191,16 +197,6 @@ form .button input{
 }
 
 
-.footer{
-      background: #D3D3D3;
-    width:auto;
-    vertical-align:bottom;
-    color: #8a8a8a;
-    font-size: 18px;
-    padding: 25px 0 60px;
-    bottom:0px;
-    left:0px;
-}
 .container1{
     max-width: 1300px;
     margin: auto;

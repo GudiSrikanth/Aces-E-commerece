@@ -32,6 +32,12 @@ header a img {
     margin-top: 8px;
     margin-bottom: 5px;
 }
+h3 {
+	color: #ea332a;
+}
+.details {
+	color: #ea332a;
+}
 
 .form {
 	 margin-top:20px;
@@ -63,8 +69,7 @@ header a img {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
 	outline: 0;
-	background-color: #328f8a;
-	 background: linear-gradient(135deg,#17dfe6 60%,rgb(255, 0, 255));
+	background-color: #ea332a;
 	width: 100%;
 	border: 0;
 	padding: 15px;
@@ -171,7 +176,7 @@ body {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	 background: linear-gradient(135deg,#17dfe6 60%,rgb(255, 0, 255));
+	background-color: #ea332a;
 	color: #fff;
 	text-transform: capitalize;
 	font-size: 15px;
