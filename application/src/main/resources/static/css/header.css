@@ -9,7 +9,7 @@
 	height:70px;
 	width:100%;
 	padding: 0 8%;
-	background: #080008;
+	background: #ADD8E6;
 	position: relative;
 }
 
@@ -30,7 +30,7 @@ nav{
 }
 .nav-links li a{
 	text-decoration: none;
-	color: #fff;
+	color: #000000;
 	padding: 5px 0;
 	position: relative;
 }
