@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-<nav class="navbar">
-	<div class="nav">
-		<img th:src="@{images/logo.png}" class="logo" alt="">
-		<div class="nav-items">
-			<div class="search">
-				<input type="text" class="search-box"
-					placeholder="search brand, product">
-				<button class="search-btn">search</button>
-			</div>
-			<div class="buttons">
-				<a th:href="@{/categories}">CATEGORIES</a> 
-				<a th:href="@{/register}">REGISTER</a>
-				<a th:href="@{/signin}">LOGIN</a>
-				<a th:href="@{/homepage}">HOME</a>
-			</div>
-		</div>
-	</div>
+     <link rel="stylesheet" href="css/header.css">
+     <link rel="stylesheet" href="css/footer.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link th:href="@{css/products.css}" rel="stylesheet" />
+<div class="header">
+<nav>
+<img th:src="@{images/logo.png}" class="logo" alt="">
+<ul class="nav-links">
+<li><a th:href="@{/categories}">CATEGORIES</a></li>
+<li><a th:href="@{/homepage}">HOME</a></li>
+<li><a th:href="@{/}">LOGOUT</a></li>
+</ul>
 </nav>
+</div>
 
 <head>
 	<title>About Us Section</title>
@@ -54,24 +51,30 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="footer-col-3">
-					<nav>
-						<ul>
-							<li><a th:href="@{/contactus}" > Contact Us</a></li>
-							<li><a  th:href="@{/}">Terms and condition</a></li>
-							<li><a  th:href="@{/}">Returns and exchange</a></li>
-							<li><a  th:href="@{/}">Private Policy</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
+	<footer>
+	<div class="footer-content">
+<h3>Aces</h3>
+<p>ACES is process improvement system that uses tools of Lean, Six Sigma, technology, and analytics to iteratively deliver better customer experience.</p>
+<ul class="socials">
+<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+</ul>
+</div>
 
-	
+<div class="footer-bottom">
+<p>copyright &copy; <a href="#">Aces</a> </p>
+<div class="footer-menu">
+<ul class="f-menu">
+<li><a th:href="@{/homepage}">HOME</a></li>
+<li><a th:href="@{/about}">About</a></li>
+<li><a th:href="@{/contactus}">Contact us</a></li>
+<li><a th:href="@{/blogpage}">Blog</a></li>
+</ul>
+</div>
+
+</footer>	
 </body>
 </html>

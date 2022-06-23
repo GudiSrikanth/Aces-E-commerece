@@ -17,7 +17,7 @@
 <nav>
 <img th:src="@{images/logo.png}" class="logo" alt="">
 <ul class="nav-links">
-<li><a th:href="@{/categories}">CATEGORIES</a></li>
+<li><a th:href="@{/electronics}">ADD CART</a></li>
 <li><a th:href="@{/homepage}">HOME</a></li>
 <li><a th:href="@{/}">LOGOUT</a></li>
 </ul>
@@ -31,7 +31,7 @@
 <input type="hidden" name="business" value="seller@dezignerfotos.com">
 
 <input type="hidden" name="item_name_1" value="item Name 1">
-<input type="hidden" name="amount_1" value="333.00">
+<input type="hidden" name="amount_1" value="233.00">
 <input type="hidden" name="amount_2" value="333.00">
 <input type="hidden" name="shipping" value="1.75">
 
@@ -84,6 +84,13 @@ Payment Details</h4>
                 <div class="input-box">
                     <input type="tel" placeholder="Address" required class="name">
                     <i class="fa fa-building icon"></i>
+                </div>
+</div>
+<div class="input-group">
+                <div class="input-box">
+                    <input type="tel" placeholder="Apply coupon" required class="name">
+                    <br><br>
+                <button>  <a th:href="@{/coupon}">VIEW COUPON</a></button> 
                 </div>
 </div>
 

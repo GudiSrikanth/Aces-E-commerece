@@ -5,8 +5,21 @@
         <title>
             Coupon
         </title>
+        <link rel="stylesheet" href="css/footer.css">
+     <link rel="stylesheet" href="css/header.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style1.css">
     </head>
+    <div class="header">
+<nav>
+<img th:src="@{images/logo.png}" class="logo" alt="">
+<ul class="nav-links">
+<li><a th:href="@{/checkout}">CHECKOUT</a></li>
+<li><a th:href="@{/homepage}">HOME</a></li>
+<li><a th:href="@{/}">LOGOUT</a></li>
+</ul>
+</nav>
+</div>
     <body>
         <div class="container">
             <div class="coupon-card">
@@ -16,7 +29,7 @@
                     <span id="cpnCode">ASD3456</span>
                     <span id="cpnBtn">Copy Code</span>
                 </div>
-                <p>Valid till: 20 June</p>
+                <p>Valid till: 26 June</p>
                 <div class="circle1"></div>
                 <div class="circle2"></div>
             </div>
@@ -30,7 +43,7 @@
         </script>
          <div class="container">
             <div class="coupon-card">
-                <img th:src="@{images/Acesimage.png}" width"150px" height="150px">
+                <img th:src="@{images/logo.png}" width"150px" height="150px">
                 <h3>20% flat off on selected products</h3>
                 <div class="coupon-row">
                     <span id="cpnCode">567AWETYU</span>
@@ -50,7 +63,7 @@
         </script>
         <div class="container">
             <div class="coupon-card">
-                <img th:src="@{images/Acesimage.png}" width"150px" height="150px">
+                <img th:src="@{images/logo.png}" width"150px" height="150px">
                 <h3>15% flat off on minimum purchase of 3000</h3>
                 <div class="coupon-row">
                     <span id="cpnCode">7AS89765</span>
@@ -70,7 +83,7 @@
         </script>
         <div class="container">
             <div class="coupon-card">
-               <img th:src="@{images/Acesimage.png}" width"150px" height="150px">
+               <img th:src="@{images/logo.png}" width"150px" height="150px">
                 <h3>Flat 500.Rs off on minimum purchase of 2500</h3>
                 <div class="coupon-row">
                     <span id="cpnCode">AHU98734</span>
@@ -90,7 +103,7 @@
         </script>
         <div class="container">
             <div class="coupon-card">
-                <img th:src="@{images/Acesimage.png}" width"150px" height="150px">
+                <img th:src="@{images/logo.png}" width"150px" height="150px">
                 <h3>5% flat off on all the items in your cart</h3>
                 <div class="coupon-row">
                     <span id="cpnCode">8AJKJH7432</span>
@@ -108,6 +121,30 @@
                 navigator.clipboard.writeText(cpnCode.innerHTML);
             }
         </script>
+ <footer>
+         <div class="footer-content">
+<h3>Aces</h3>
+<p>ACES is process improvement system that uses tools of Lean, Six Sigma, technology, and analytics to iteratively deliver better customer experience.</p>
+<ul class="socials">
+<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+</ul>
+</div>
+<div class="footer-bottom">
+<p>copyright &copy; <a href="#">Aces</a> </p>
+<div class="footer-menu">
+<ul class="f-menu">
+<li><a th:href="@{/homepage}">HOME</a></li>
+<li><a th:href="@{/about}">About</a></li>
+<li><a th:href="@{/contactus}">Contact us</a></li>
+<li><a th:href="@{/blogpage}">Blog</a></li>
+</ul>
+</div>
+</footer>
+        
     </body>
 </html>
         

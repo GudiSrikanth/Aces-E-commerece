@@ -55,6 +55,11 @@ public class AppController {
 
 		return "coupon";
 	}
+	@GetMapping("/discount")
+	public String discount() {
+
+		return "discount";
+	}
 
 	@GetMapping("/electronics")
 	public String listElectronics() {

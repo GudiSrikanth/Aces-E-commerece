@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<body>
+    <input id="price">Price
+    <br><br>
+    <input id="discount">%
+    <br><br>
+    <button onclick="getPrice()">
+Get total
+</button>
+    <br><br>
+    <input readonly id="total">
+    <script>
+        getPrice = function() {
+            var numVal1 = Number(document.getElementById("prices").value);
+            var numVal2 = Number(document.getElementById("discount").value) / 100;
+            var totalValue = numVal1 - (numVal1 * numVal2)
+            document.getElementById("total").value = totalValue.toFixed(2);
+        }
+    </script>
+</body>
+</html>
