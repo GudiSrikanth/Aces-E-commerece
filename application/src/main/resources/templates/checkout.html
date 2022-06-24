@@ -1,138 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="paymentform.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-     <link rel="stylesheet" href="css/checkout.css">   
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/header.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="paymentform.css" rel="stylesheet">
+<link
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="css/checkout.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/header.css">
 </head>
 <body>
-<div class="header">
-<nav>
-<img th:src="@{images/logo.png}" class="logo" alt="">
-<ul class="nav-links">
-<li><a th:href="@{/electronics}">ADD CART</a></li>
-<li><a th:href="@{/homepage}">HOME</a></li>
-<li><a th:href="@{/}">LOGOUT</a></li>
-</ul>
-</nav>
-</div>
-    <div class="wrapper">
-     
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="upload" value="1">
-<input type="hidden" name="business" value="seller@dezignerfotos.com">
+	<div class="header">
+		<nav>
+			<img th:src="@{images/logo.png}" class="logo" alt="">
+			<ul class="nav-links">
+				<li><a th:href="@{/electronics}">ADD CART</a></li>
+				<li><a th:href="@{/homepage}">HOME</a></li>
+				<li><a th:href="@{/}">LOGOUT</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="wrapper">
 
-<input type="hidden" name="item_name_1" value="item Name 1">
-<input type="hidden" name="amount_1" value="233.00">
-<input type="hidden" name="amount_2" value="333.00">
-<input type="hidden" name="shipping" value="1.75">
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="post"
+			target="_top">
+			<input type="hidden" name="cmd" value="_cart"> <input
+				type="hidden" name="upload" value="1"> <input type="hidden"
+				name="business" value="seller@dezignerfotos.com"> <input
+				type="hidden" name="item_name_1" value="item Name 1"> <input
+				type="hidden" name="amount_1" value="233.00"> <input
+				type="hidden" name="amount_2" value="333.00"> <input
+				type="hidden" name="shipping" value="1.75">
 
-  <h4>
-Account</h4>
-<div class="input-group">
-                <div class="input-box">
-                    <input type="text" placeholder="Full Name" required class="name">
-                    <i class="fa fa-user icon"></i>
-                </div>
-<div class="input-box">
-                    <input type="text" placeholder="Nick Name" required class="name">
-                    <i class="fa fa-user icon"></i>
-                </div>
-</div>
-<div class="input-group">
-                <div class="input-box">
-                    <input type="email" placeholder="Email Adress" required class="name">
-                    <i class="fa fa-envelope icon"></i>
-                </div>
-</div>
-<div class="input-group">
-                <div class="input-box">
-                    <h4>
-Date of Birth</h4>
-<input type="text" placeholder="DD" class="dob">
-                    <input type="text" placeholder="MM" class="dob">
-                    <input type="text" placeholder="YYYY" class="dob">
-                </div>
-<div class="input-box">
-                    <h4>
-Gender</h4>
-<input type="radio" id="b1" name="gendar" checked class="radio">
-                    <label for="b1">Male</label>
-                    <input type="radio" id="b2" name="gendar" class="radio">
-                    <label for="b2">Female</label>
-                </div>
-</div>
-<div class="input-group">
-                <div class="input-box">
-                    <h4>
-Payment Details</h4>
-<input type="radio" name="pay" id="bc1" checked class="radio">
-                    <label for="bc1"><span><i class="fa fa-cc-visa"></i> Credit Card</span></label>
-                    <input type="radio" name="pay" id="bc2" class="radio">
-                    <label for="bc2"><span><i class="fa fa-cc-paypal"></i> Paypal</span></label>
-                </div>
-</div>
-<div class="input-group">
-                <div class="input-box">
-                    <input type="tel" placeholder="Address" required class="name">
-                    <i class="fa fa-building icon"></i>
-                </div>
-</div>
-<div class="input-group">
-                <div class="input-box">
-                    <input type="tel" placeholder="Apply coupon" required class="name">
-                    <br><br>
-                <button>  <a th:href="@{/coupon}">VIEW COUPON</a></button> 
-                </div>
-</div>
+			<div class="input-group">
+				<div class="input-box">
+					<h4>Payment Details</h4>
+					<input type="radio" name="pay" id="bc1" checked class="radio">
+					<label for="bc1"><span><i class="fa fa-cc-visa"></i>
+							Credit Card</span></label> <input type="radio" name="pay" id="bc2" class="radio">
+					<label for="bc2"><span><i class="fa fa-cc-paypal"></i>
+							Paypal</span></label>
+				</div>
+			</div>
+			<div class="input-group">
+				<div class="input-box">
+					<input type="tel" placeholder="Address" required class="name">
+					<i class="fa fa-building icon"></i>
+				</div>
+			</div>
+			<div class="input-group">
+				<div class="input-box">
+					<input type="tel" placeholder="Apply coupon" required class="name">
+					<br>
+					<br>
+					<button>
+						<a th:href="@{/coupon}">VIEW COUPON</a>
+					</button>
+				</div>
+			</div>
 
 
 
-<div class="input-group">
-                <div class="input-box">
-                    <button type="submit" value="payapal">PAY NOW</button>
-                </div>
-</div>
+			<div class="input-group">
+				<div class="input-box">
+					<button type="submit" value="payapal">PAY NOW</button>
+				</div>
+			</div>
+	</div>
+	</form>
 
-</div>
-</form>
+	<footer>
+		<div class="footer-content">
+			<h3>ACES</h3>
+			<p>ACES is a Ecommerece website where you will find great items.</p>
+			<ul class="socials">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>
+				copyright &copy; <a href="#">ACES</a>
+			</p>
+			<div class="footer-menu">
+				<ul class="f-menu">
+					<li><a href="">Home</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+					<li><a href="">Blog</a></li>
+				</ul>
+			</div>
+		</div>
 
-    <footer>
-        <div class="footer-content">
-            <h3>ACES </h3>
-            <p>ACES is a Ecommerece website where you will find great items.</p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>copyright &copy; <a href="#">ACES</a>  </p>
-                    <div class="footer-menu">
-                      <ul class="f-menu">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Blog</a></li>
-                      </ul>
-                    </div>
-        </div>
-
-    </footer>
+	</footer>
 
 </body>
 </html>
 
 
- 
